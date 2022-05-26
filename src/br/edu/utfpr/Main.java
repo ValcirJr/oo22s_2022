@@ -1,4 +1,7 @@
 package br.edu.utfpr;
+
+import java.util.List;
+
 /*
 Criar programa orientado à objetos para solucionar os seguintes casos de uso:
 - Será o controle de uma biblioteca
@@ -14,6 +17,15 @@ Criar programa orientado à objetos para solucionar os seguintes casos de uso:
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
+
+        BancoDeDados.pessoas.add(new Pessoa("João"));
+        BancoDeDados.livros.addAll(List.of(
+                new Livro(1, "Harry Potter e a Câmara Secreta"),
+                new Livro(2, "Harry Potter e a Câmara Secreta"),
+                new Livro(3, "Crime e Castigo"),
+                new Livro(4, "Florence and Gibs"),
+                new Livro(5, "O Pequeno Principe")
+        ));
+
     }
 }
